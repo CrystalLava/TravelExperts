@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TravelExpertsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Packages">
+          <Key>
+            <PropertyRef Name="PackageId" />
+          </Key>
+          <Property Name="PackageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PkgName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PkgStartDate" Type="datetime" />
+          <Property Name="PkgEndDate" Type="datetime" />
+          <Property Name="PkgDesc" Type="nvarchar" MaxLength="50" />
+          <Property Name="PkgBasePrice" Type="money" Nullable="false" />
+          <Property Name="PkgAgencyCommission" Type="money" />
+        </EntityType>
+        <EntityType Name="Packages_Products_Suppliers">
+          <Key>
+            <PropertyRef Name="PackageId" />
+            <PropertyRef Name="ProductSupplierId" />
+          </Key>
+          <Property Name="PackageId" Type="int" Nullable="false" />
+          <Property Name="ProductSupplierId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProdName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products_Suppliers">
+          <Key>
+            <PropertyRef Name="ProductSupplierId" />
+          </Key>
+          <Property Name="ProductSupplierId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="SupplierId" Type="int" />
+        </EntityType>
+        <EntityType Name="SupplierContacts">
+          <Key>
+            <PropertyRef Name="SupplierContactId" />
+          </Key>
+          <Property Name="SupplierContactId" Type="int" Nullable="false" />
+          <Property Name="SupConFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SupConLastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SupConCompany" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConCity" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConProv" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConPostal" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConCountry" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConBusPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="SupConFax" Type="nvarchar" MaxLength="50" />
+          <Property Name="SupConEmail" Type="nvarchar" MaxLength="255" />
+          <Property Name="SupConURL" Type="nvarchar" MaxLength="255" />
+          <Property Name="AffiliationId" Type="nvarchar" MaxLength="10" />
+          <Property Name="SupplierId" Type="int" />
+        </EntityType>
+        <EntityType Name="Suppliers">
+          <Key>
+            <PropertyRef Name="SupplierId" />
+          </Key>
+          <Property Name="SupplierId" Type="int" Nullable="false" />
+          <Property Name="SupName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="Packages_Products_Supplie_FK00">
+          <End Role="Packages" Type="Self.Packages" Multiplicity="1" />
+          <End Role="Packages_Products_Suppliers" Type="Self.Packages_Products_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Packages">
+              <PropertyRef Name="PackageId" />
+            </Principal>
+            <Dependent Role="Packages_Products_Suppliers">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Packages_Products_Supplie_FK01">
+          <End Role="Products_Suppliers" Type="Self.Products_Suppliers" Multiplicity="1" />
+          <End Role="Packages_Products_Suppliers" Type="Self.Packages_Products_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products_Suppliers">
+              <PropertyRef Name="ProductSupplierId" />
+            </Principal>
+            <Dependent Role="Packages_Products_Suppliers">
+              <PropertyRef Name="ProductSupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Products_Suppliers_FK00">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="Products_Suppliers" Type="Self.Products_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Products_Suppliers">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Products_Suppliers_FK01">
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+          <End Role="Products_Suppliers" Type="Self.Products_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="Products_Suppliers">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SupplierContacts_FK01">
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+          <End Role="SupplierContacts" Type="Self.SupplierContacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="SupplierContacts">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TravelExpertsModelStoreContainer">
+          <EntitySet Name="Packages" EntityType="Self.Packages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Packages_Products_Suppliers" EntityType="Self.Packages_Products_Suppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products_Suppliers" EntityType="Self.Products_Suppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SupplierContacts" EntityType="Self.SupplierContacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Packages_Products_Supplie_FK00" Association="Self.Packages_Products_Supplie_FK00">
+            <End Role="Packages" EntitySet="Packages" />
+            <End Role="Packages_Products_Suppliers" EntitySet="Packages_Products_Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="Packages_Products_Supplie_FK01" Association="Self.Packages_Products_Supplie_FK01">
+            <End Role="Products_Suppliers" EntitySet="Products_Suppliers" />
+            <End Role="Packages_Products_Suppliers" EntitySet="Packages_Products_Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="Products_Suppliers_FK00" Association="Self.Products_Suppliers_FK00">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Products_Suppliers" EntitySet="Products_Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="Products_Suppliers_FK01" Association="Self.Products_Suppliers_FK01">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="Products_Suppliers" EntitySet="Products_Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="SupplierContacts_FK01" Association="Self.SupplierContacts_FK01">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="SupplierContacts" EntitySet="SupplierContacts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TravelExpertsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="PackageId" />
+          </Key>
+          <Property Name="PackageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PkgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PkgStartDate" Type="DateTime" Precision="3" />
+          <Property Name="PkgEndDate" Type="DateTime" Precision="3" />
+          <Property Name="PkgDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PkgBasePrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="PkgAgencyCommission" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Products_Suppliers" Relationship="Self.Packages_Products_Suppliers" FromRole="Packages" ToRole="Products_Suppliers" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Products_Suppliers" Relationship="Self.Products_Suppliers_FK00" FromRole="Products" ToRole="Products_Suppliers" />
+        </EntityType>
+        <EntityType Name="Products_Suppliers">
+          <Key>
+            <PropertyRef Name="ProductSupplierId" />
+          </Key>
+          <Property Name="ProductSupplierId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="SupplierId" Type="Int32" />
+          <NavigationProperty Name="Product" Relationship="Self.Products_Suppliers_FK00" FromRole="Products_Suppliers" ToRole="Products" />
+          <NavigationProperty Name="Supplier" Relationship="Self.Products_Suppliers_FK01" FromRole="Products_Suppliers" ToRole="Suppliers" />
+          <NavigationProperty Name="Packages" Relationship="Self.Packages_Products_Suppliers" FromRole="Products_Suppliers" ToRole="Packages" />
+        </EntityType>
+        <EntityType Name="SupplierContact">
+          <Key>
+            <PropertyRef Name="SupplierContactId" />
+          </Key>
+          <Property Name="SupplierContactId" Type="Int32" Nullable="false" />
+          <Property Name="SupConFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SupConLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SupConCompany" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConCity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConProv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConPostal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConCountry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConBusPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SupConFax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SupConEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SupConURL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AffiliationId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierId" Type="Int32" />
+          <NavigationProperty Name="Supplier" Relationship="Self.SupplierContacts_FK01" FromRole="SupplierContacts" ToRole="Suppliers" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierId" />
+          </Key>
+          <Property Name="SupplierId" Type="Int32" Nullable="false" />
+          <Property Name="SupName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products_Suppliers" Relationship="Self.Products_Suppliers_FK01" FromRole="Suppliers" ToRole="Products_Suppliers" />
+          <NavigationProperty Name="SupplierContacts" Relationship="Self.SupplierContacts_FK01" FromRole="Suppliers" ToRole="SupplierContacts" />
+        </EntityType>
+        <Association Name="Products_Suppliers_FK00">
+          <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="Products_Suppliers" Type="Self.Products_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Products_Suppliers">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Products_Suppliers_FK01">
+          <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="Products_Suppliers" Type="Self.Products_Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="Products_Suppliers">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SupplierContacts_FK01">
+          <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="SupplierContacts" Type="Self.SupplierContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="SupplierId" />
+            </Principal>
+            <Dependent Role="SupplierContacts">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Packages_Products_Suppliers">
+          <End Role="Packages" Type="Self.Package" Multiplicity="*" />
+          <End Role="Products_Suppliers" Type="Self.Products_Suppliers" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="TravelExpertsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Packages" EntityType="Self.Package" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Products_Suppliers" EntityType="Self.Products_Suppliers" />
+          <EntitySet Name="SupplierContacts" EntityType="Self.SupplierContact" />
+          <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+          <AssociationSet Name="Products_Suppliers_FK00" Association="Self.Products_Suppliers_FK00">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Products_Suppliers" EntitySet="Products_Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="Products_Suppliers_FK01" Association="Self.Products_Suppliers_FK01">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="Products_Suppliers" EntitySet="Products_Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="SupplierContacts_FK01" Association="Self.SupplierContacts_FK01">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="SupplierContacts" EntitySet="SupplierContacts" />
+          </AssociationSet>
+          <AssociationSet Name="Packages_Products_Suppliers" Association="Self.Packages_Products_Suppliers">
+            <End Role="Packages" EntitySet="Packages" />
+            <End Role="Products_Suppliers" EntitySet="Products_Suppliers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TravelExpertsModelStoreContainer" CdmEntityContainer="TravelExpertsEntities">
+          <EntitySetMapping Name="Packages">
+            <EntityTypeMapping TypeName="TravelExpertsModel.Package">
+              <MappingFragment StoreEntitySet="Packages">
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="PkgName" ColumnName="PkgName" />
+                <ScalarProperty Name="PkgStartDate" ColumnName="PkgStartDate" />
+                <ScalarProperty Name="PkgEndDate" ColumnName="PkgEndDate" />
+                <ScalarProperty Name="PkgDesc" ColumnName="PkgDesc" />
+                <ScalarProperty Name="PkgBasePrice" ColumnName="PkgBasePrice" />
+                <ScalarProperty Name="PkgAgencyCommission" ColumnName="PkgAgencyCommission" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="TravelExpertsModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products_Suppliers">
+            <EntityTypeMapping TypeName="TravelExpertsModel.Products_Suppliers">
+              <MappingFragment StoreEntitySet="Products_Suppliers">
+                <ScalarProperty Name="ProductSupplierId" ColumnName="ProductSupplierId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SupplierContacts">
+            <EntityTypeMapping TypeName="TravelExpertsModel.SupplierContact">
+              <MappingFragment StoreEntitySet="SupplierContacts">
+                <ScalarProperty Name="SupplierContactId" ColumnName="SupplierContactId" />
+                <ScalarProperty Name="SupConFirstName" ColumnName="SupConFirstName" />
+                <ScalarProperty Name="SupConLastName" ColumnName="SupConLastName" />
+                <ScalarProperty Name="SupConCompany" ColumnName="SupConCompany" />
+                <ScalarProperty Name="SupConAddress" ColumnName="SupConAddress" />
+                <ScalarProperty Name="SupConCity" ColumnName="SupConCity" />
+                <ScalarProperty Name="SupConProv" ColumnName="SupConProv" />
+                <ScalarProperty Name="SupConPostal" ColumnName="SupConPostal" />
+                <ScalarProperty Name="SupConCountry" ColumnName="SupConCountry" />
+                <ScalarProperty Name="SupConBusPhone" ColumnName="SupConBusPhone" />
+                <ScalarProperty Name="SupConFax" ColumnName="SupConFax" />
+                <ScalarProperty Name="SupConEmail" ColumnName="SupConEmail" />
+                <ScalarProperty Name="SupConURL" ColumnName="SupConURL" />
+                <ScalarProperty Name="AffiliationId" ColumnName="AffiliationId" />
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="TravelExpertsModel.Supplier">
+              <MappingFragment StoreEntitySet="Suppliers">
+                <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+                <ScalarProperty Name="SupName" ColumnName="SupName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Packages_Products_Suppliers" TypeName="TravelExpertsModel.Packages_Products_Suppliers" StoreEntitySet="Packages_Products_Suppliers">
+            <EndProperty Name="Packages">
+              <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+            </EndProperty>
+            <EndProperty Name="Products_Suppliers">
+              <ScalarProperty Name="ProductSupplierId" ColumnName="ProductSupplierId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

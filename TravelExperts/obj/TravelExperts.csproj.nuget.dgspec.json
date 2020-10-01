@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+        "projectName": "TravelExperts",
+        "projectPath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+        "packagesPath": "C:\\Users\\cpark\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\cpark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

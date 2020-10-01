@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78a942ce0a0347a290084fa9e9a95d88" Name="Diagram1">
+        <EntityTypeShape EntityType="TravelExpertsModel.Package" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelExpertsModel.Product" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelExpertsModel.Products_Suppliers" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelExpertsModel.SupplierContact" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelExpertsModel.Supplier" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="TravelExpertsModel.Products_Suppliers_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelExpertsModel.Products_Suppliers_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelExpertsModel.SupplierContacts_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelExpertsModel.Packages_Products_Suppliers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

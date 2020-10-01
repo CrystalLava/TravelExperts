@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelExpertsModelStoreContainer" CdmEntityContainer="TravelExpertsEntities">
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="TravelExpertsModel.Package">
+        <MappingFragment StoreEntitySet="Packages">
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="PkgName" ColumnName="PkgName" />
+          <ScalarProperty Name="PkgStartDate" ColumnName="PkgStartDate" />
+          <ScalarProperty Name="PkgEndDate" ColumnName="PkgEndDate" />
+          <ScalarProperty Name="PkgDesc" ColumnName="PkgDesc" />
+          <ScalarProperty Name="PkgBasePrice" ColumnName="PkgBasePrice" />
+          <ScalarProperty Name="PkgAgencyCommission" ColumnName="PkgAgencyCommission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="TravelExpertsModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products_Suppliers">
+      <EntityTypeMapping TypeName="TravelExpertsModel.Products_Suppliers">
+        <MappingFragment StoreEntitySet="Products_Suppliers">
+          <ScalarProperty Name="ProductSupplierId" ColumnName="ProductSupplierId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierContacts">
+      <EntityTypeMapping TypeName="TravelExpertsModel.SupplierContact">
+        <MappingFragment StoreEntitySet="SupplierContacts">
+          <ScalarProperty Name="SupplierContactId" ColumnName="SupplierContactId" />
+          <ScalarProperty Name="SupConFirstName" ColumnName="SupConFirstName" />
+          <ScalarProperty Name="SupConLastName" ColumnName="SupConLastName" />
+          <ScalarProperty Name="SupConCompany" ColumnName="SupConCompany" />
+          <ScalarProperty Name="SupConAddress" ColumnName="SupConAddress" />
+          <ScalarProperty Name="SupConCity" ColumnName="SupConCity" />
+          <ScalarProperty Name="SupConProv" ColumnName="SupConProv" />
+          <ScalarProperty Name="SupConPostal" ColumnName="SupConPostal" />
+          <ScalarProperty Name="SupConCountry" ColumnName="SupConCountry" />
+          <ScalarProperty Name="SupConBusPhone" ColumnName="SupConBusPhone" />
+          <ScalarProperty Name="SupConFax" ColumnName="SupConFax" />
+          <ScalarProperty Name="SupConEmail" ColumnName="SupConEmail" />
+          <ScalarProperty Name="SupConURL" ColumnName="SupConURL" />
+          <ScalarProperty Name="AffiliationId" ColumnName="AffiliationId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="TravelExpertsModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SupName" ColumnName="SupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Packages_Products_Suppliers" TypeName="TravelExpertsModel.Packages_Products_Suppliers" StoreEntitySet="Packages_Products_Suppliers">
+      <EndProperty Name="Packages">
+        <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+      </EndProperty>
+      <EndProperty Name="Products_Suppliers">
+        <ScalarProperty Name="ProductSupplierId" ColumnName="ProductSupplierId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

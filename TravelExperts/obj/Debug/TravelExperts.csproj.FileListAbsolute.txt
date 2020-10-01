@@ -1,0 +1,15 @@
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\bin\Debug\TravelExperts.exe.config
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\bin\Debug\TravelExperts.exe
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\bin\Debug\TravelExperts.pdb
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.csprojAssemblyReference.cache
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.Properties.Resources.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.csproj.GenerateResource.cache
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.csproj.CoreCompileInputs.cache
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.exe
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.pdb
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.TravelExpertsAdmin.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\bin\Debug\EntityFramework.dll
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.csproj.CopyComplete
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.ManageProductListing.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.AddEditProduct.resources

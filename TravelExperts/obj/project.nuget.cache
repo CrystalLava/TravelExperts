@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dROUlOQY24E9K6G4CFncHf+IZTY2Sp7hOjFL21sTH0Pfw+6iaRrOflC58wnGVM62HROyHP8B5L0hQLuVSzBV7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cpark\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
