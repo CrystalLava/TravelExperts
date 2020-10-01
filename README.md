@@ -14,10 +14,10 @@ Crystal -Travel Experts Admin Page (if there is time, we can add a users/login p
 -	(Package ID/Package Name/ Info/ Commission/etc)
 -	(Package Id/ ProductSupplierID)
 
-Crystal - Manage Products DONE!!!!  
-        -	Add products (Product ID/ProdName)
-        -	Edit products
-        - Delete
+Crystal Manage Products DONE!!!!  
+- Add products (Product ID/ProdName)
+- Edit products
+- Delete
 
 ??Manage Supplier  
 -	Add supplier 
@@ -34,6 +34,7 @@ Crystal - Manage Products DONE!!!!
 
 
 ***OTHER TABLES USED IN PROJECT IGNORE FOR NOW***
+
 Products/Suppliers
 -	(ProductSupplier ID/ProductID/SupplierID)
 
