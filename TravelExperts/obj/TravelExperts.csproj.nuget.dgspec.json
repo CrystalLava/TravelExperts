@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {}
+    "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {
+    "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+        "projectUniqueName": "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
         "projectName": "TravelExperts",
-        "projectPath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
-        "packagesPath": "C:\\Users\\cpark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\obj\\",
+        "projectPath": "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+        "packagesPath": "C:\\Users\\karima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\cpark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\karima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

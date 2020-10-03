@@ -43,17 +43,19 @@
             this.gvProductList.Name = "gvProductList";
             this.gvProductList.Size = new System.Drawing.Size(166, 192);
             this.gvProductList.TabIndex = 0;
+            this.gvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductList_CellContentClick);
             // 
             // lblAddProduct
             // 
             this.lblAddProduct.AutoSize = true;
-            this.lblAddProduct.Font = new System.Drawing.Font("Bell MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddProduct.Location = new System.Drawing.Point(71, 19);
             this.lblAddProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddProduct.Name = "lblAddProduct";
-            this.lblAddProduct.Size = new System.Drawing.Size(187, 27);
+            this.lblAddProduct.Size = new System.Drawing.Size(201, 29);
             this.lblAddProduct.TabIndex = 1;
             this.lblAddProduct.Text = "Manage Products";
+            this.lblAddProduct.Click += new System.EventHandler(this.lblAddProduct_Click);
             // 
             // btnAddProduct
             // 
@@ -95,7 +97,7 @@
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.lblAddProduct);
             this.Controls.Add(this.gvProductList);
-            this.Font = new System.Drawing.Font("Bell MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ManageProductListing";
             this.Text = "Manage Products";
             this.Load += new System.EventHandler(this.ManageProductListing_Load);

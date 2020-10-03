@@ -5,8 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,15 +24,7 @@ namespace TravelExperts
 
         private void ManageProductListing_Load(object sender, EventArgs e)
         {
-            
-                try
-                {
-                    PopulateGrid();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
-                }
+
         }
         //Function to PopulateGrid. Can be called anytime we need a grid refresh   
         public void PopulateGrid()
@@ -109,6 +101,16 @@ namespace TravelExperts
             }
 
             //gvProductList.Refresh();
+        }
+
+        private void lblAddProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvProductList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

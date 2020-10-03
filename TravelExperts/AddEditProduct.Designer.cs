@@ -38,11 +38,11 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Bell MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(85, 33);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(0, 27);
+            this.lblTitle.Size = new System.Drawing.Size(0, 29);
             this.lblTitle.TabIndex = 0;
             // 
             // txtProduct
@@ -52,6 +52,7 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(320, 22);
             this.txtProduct.TabIndex = 1;
+            this.txtProduct.TextChanged += new System.EventHandler(this.txtProduct_TextChanged);
             // 
             // btnCancel
             // 
@@ -79,13 +80,13 @@
             this.lblProductId.AutoSize = true;
             this.lblProductId.Location = new System.Drawing.Point(42, 74);
             this.lblProductId.Name = "lblProductId";
-            this.lblProductId.Size = new System.Drawing.Size(0, 15);
+            this.lblProductId.Size = new System.Drawing.Size(0, 16);
             this.lblProductId.TabIndex = 5;
             this.lblProductId.Visible = false;
             // 
             // AddEditProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 235);
             this.Controls.Add(this.lblProductId);
@@ -93,11 +94,11 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtProduct);
             this.Controls.Add(this.lblTitle);
-            this.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AddEditProduct";
             this.Text = "Add Products";
-            
+            this.Load += new System.EventHandler(this.AddEditProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
