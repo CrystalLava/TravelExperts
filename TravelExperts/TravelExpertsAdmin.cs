@@ -59,5 +59,10 @@ namespace TravelExperts
 
         }
 
+        private void managePackagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmManagePackageListing=new ManagePackageListing();
+            frmManagePackageListing.Show();
+        }
     }
 }

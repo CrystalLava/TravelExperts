@@ -104,20 +104,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\karima\\.nuget\\packages\\": {}
+    "C:\\Users\\Payam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+      "projectUniqueName": "C:\\Users\\Payam\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
       "projectName": "TravelExperts",
-      "projectPath": "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
-      "packagesPath": "C:\\Users\\karima\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\karima\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\obj\\",
+      "projectPath": "C:\\Users\\Payam\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+      "packagesPath": "C:\\Users\\Payam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Payam\\Source\\Repos\\CrystalLava\\TravelExperts\\TravelExperts\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\karima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Payam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

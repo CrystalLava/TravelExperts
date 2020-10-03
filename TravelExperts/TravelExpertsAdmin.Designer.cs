@@ -52,6 +52,7 @@
             this.managePackagesToolStripMenuItem.Name = "managePackagesToolStripMenuItem";
             this.managePackagesToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.managePackagesToolStripMenuItem.Text = "Manage Packages";
+            this.managePackagesToolStripMenuItem.Click += new System.EventHandler(this.managePackagesToolStripMenuItem_Click);
             // 
             // manageProductsToolStripMenuItem
             // 

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditPackage.Designer.cs">
+      <DependentUpon>AddEditPackage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="AddEditSupplier.Designer.cs">
       <DependentUpon>AddEditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePackageListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePackageListing.Designer.cs">
+      <DependentUpon>ManagePackageListing.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageProductListing.cs">
       <SubType>Form</SubType>
@@ -82,6 +94,7 @@
     <Compile Include="Products_Suppliers.cs">
       <DependentUpon>TravelExpertsDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Supplier.cs">
       <DependentUpon>TravelExpertsDB.tt</DependentUpon>
@@ -115,11 +128,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TravelExpertsDB.edmx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEditPackage.resx">
+      <DependentUpon>AddEditPackage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEditProduct.resx">
       <DependentUpon>AddEditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEditSupplier.resx">
       <DependentUpon>AddEditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePackageListing.resx">
+      <DependentUpon>ManagePackageListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageProductListing.resx">
       <DependentUpon>ManageProductListing.cs</DependentUpon>
