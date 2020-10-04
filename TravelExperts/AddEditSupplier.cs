@@ -10,88 +10,88 @@ using System.Windows.Forms;
 
 namespace TravelExperts
 {
-    public partial class AddEditProduct : Form
+    public partial class AddEditSupplier : Form
     {
         private readonly TravelExpertsEntities _db;
-        private ManageProductListing _manageProductListing;
+        private ManageSupplierListing _manageSupplierListing;
         private bool isEditMode;
-     
-        public AddEditProduct(ManageProductListing manageProductListing = null)
-        {
-            InitializeComponent();            
-            lblTitle.Text = "Add New Product";
-            this.Text = "Add New Product";            
-            isEditMode = false;
-            _manageProductListing = manageProductListing;
-            _db = new TravelExpertsEntities();
-        }
-        public AddEditProduct(Product productToEdit, ManageProductListing manageProductListing = null)
+
+        public AddEditSupplier(ManageSupplierListing manageSupplierListing = null)
         {
             InitializeComponent();
-            lblTitle.Text = "Edit Products";
-            this.Text = "Edit Products";
-            _manageProductListing = manageProductListing;
+            lblTitle.Text = "Add New Supplier";
+            this.Text = "Add New Supplier";
+            isEditMode = false;
+            _manageSupplierListing = manageSupplierListing;
+            _db = new TravelExpertsEntities();
+        }
+        public AddEditSupplier(Supplier supplierToEdit, ManageSupplierListing manageSupplierListing = null)
+        {
+            InitializeComponent();
+            lblTitle.Text = "Edit Suppliers";
+            this.Text = "Edit Suppliers";
+            _manageSupplierListing = manageSupplierListing;
 
-            if (productToEdit == null)
+            if (supplierToEdit == null)
             {
-                MessageBox.Show("Please ensure you selected a valid Product to edit");
+                MessageBox.Show("Please ensure you selected a valid Supplier to edit");
                 Close();
             }
             else
             {
                 isEditMode = true;
                 _db = new TravelExpertsEntities();
-                PopulateFields(productToEdit);
+                PopulateFields(supplierToEdit);
             }
 
         }
 
-        private void PopulateFields(Product productToEdit)
+        private void PopulateFields(Supplier supplierToEdit)
         {
-            lblProductId.Text = productToEdit.ProductId.ToString();
-            txtProduct.Text = productToEdit.ProdName;
+            lblSupplierId.Text = supplierToEdit.SupplierId.ToString();
+            //txtSupplier.Text = supplierToEdit.SuppName;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                string product = txtProduct.Text;
+                string supplier = txtSupplier.Text;
 
                 var isValid = true;
                 var errorMessage = "";
 
-                if (string.IsNullOrWhiteSpace(product))
+                if (string.IsNullOrWhiteSpace(supplier))
                 {
                     isValid = false;
-                    errorMessage += "Error: Please Enter a Product Name";
+                    errorMessage += "Error: Please Enter a Supplier Name";
                 }
 
                 if (isValid)
                 {
-                    //Declare an object of the product to be added
-                    var productlisting = new Product();
+                    //Declare an object of the supplier to be added
+                    var supplierlisting = new Supplier();
 
                     if (isEditMode)
                     {
                         //If in edit mode, then get the ID and retrieve the record from the database and place
                         //the result in the record object
-                        var id = int.Parse(lblProductId.Text);
-                        productlisting = _db.Products.FirstOrDefault(p => p.ProductId == id);
+                        var id = int.Parse(lblSupplierId.Text);
+                        supplierlisting = _db.Suppliers.FirstOrDefault(s => s.SupplierId == id);
 
                     }
                     //Populate record object with values from the form 
-                    productlisting.ProdName = product;
+                    supplierlisting.SupName = supplier;
 
                     //If not in edit mode, then add the record object to the database
                     if (!isEditMode)
-                        _db.Products.Add(productlisting);
+                        _db.Suppliers.Add(supplierlisting);
 
                     //Save Changes made to the entity
                     _db.SaveChanges();
-                    _manageProductListing.PopulateGrid();
+                    _manageSupplierListing.PopulateGrid();
 
-                    MessageBox.Show($"Product Name :{product} has been added");
+                    MessageBox.Show($"Supplier Name :{supplier} has been added");
 
                     Close();
                 }
@@ -112,12 +112,12 @@ namespace TravelExperts
             Close();
         }
 
-        private void txtProduct_TextChanged(object sender, EventArgs e)
+        private void txtSupplier_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void AddEditProduct_Load(object sender, EventArgs e)
+        private void AddEditSupplier_Load(object sender, EventArgs e)
         {
 
         }

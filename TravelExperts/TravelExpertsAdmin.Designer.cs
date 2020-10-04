@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.managePackagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageSuppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.managePackagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,13 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // managePackagesToolStripMenuItem
+            // 
+            this.managePackagesToolStripMenuItem.Name = "managePackagesToolStripMenuItem";
+            this.managePackagesToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.managePackagesToolStripMenuItem.Text = "Manage Packages";
+            this.managePackagesToolStripMenuItem.Click += new System.EventHandler(this.managePackagesToolStripMenuItem_Click);
+            // 
             // manageProductsToolStripMenuItem
             // 
             this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
@@ -59,12 +66,7 @@
             this.manageSuppliersToolStripMenuItem.Name = "manageSuppliersToolStripMenuItem";
             this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.manageSuppliersToolStripMenuItem.Text = "Manage Suppliers";
-            // 
-            // managePackagesToolStripMenuItem
-            // 
-            this.managePackagesToolStripMenuItem.Name = "managePackagesToolStripMenuItem";
-            this.managePackagesToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.managePackagesToolStripMenuItem.Text = "Manage Packages";
+            this.manageSuppliersToolStripMenuItem.Click += new System.EventHandler(this.manageSuppliersToolStripMenuItem_Click);
             // 
             // TravelExpertsAdmin
             // 
@@ -76,6 +78,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TravelExpertsAdmin";
             this.Text = "Travel Experts Admin Page";
+            this.Load += new System.EventHandler(this.TravelExpertsAdmin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

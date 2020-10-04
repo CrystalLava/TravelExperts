@@ -36,5 +36,36 @@ namespace TravelExperts
             };
             productlist.Show();
         }
+
+        private void addSuppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var addSupplier = new AddEditSupplier
+            {
+                MdiParent = this
+            };
+            addSupplier.Show();
+        }
+
+        private void manageSuppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var supplierlist = new ManageSupplierListing
+            {
+                MdiParent = this
+            };
+            supplierlist.Show();
+        }
+        private void TravelExpertsAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managePackagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmManagePackageListing=new ManagePackageListing
+            {
+                MdiParent= this
+            };
+            frmManagePackageListing.Show();
+        }
     }
 }

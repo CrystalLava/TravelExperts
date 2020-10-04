@@ -49,17 +49,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditPackage.Designer.cs">
+      <DependentUpon>AddEditPackage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddEditProduct.Designer.cs">
       <DependentUpon>AddEditProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddEditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditSupplier.Designer.cs">
+      <DependentUpon>AddEditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePackageListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePackageListing.Designer.cs">
+      <DependentUpon>ManagePackageListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageProductListing.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageProductListing.Designer.cs">
       <DependentUpon>ManageProductListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSupplierListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSupplierListing.Designer.cs">
+      <DependentUpon>ManageSupplierListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Package.cs">
       <DependentUpon>TravelExpertsDB.tt</DependentUpon>
@@ -84,6 +108,11 @@
     <Compile Include="TravelExpertsAdmin.Designer.cs">
       <DependentUpon>TravelExpertsAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravelExpertsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TravelExpertsDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,11 +128,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TravelExpertsDB.edmx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEditPackage.resx">
+      <DependentUpon>AddEditPackage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEditProduct.resx">
       <DependentUpon>AddEditProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddEditSupplier.resx">
+      <DependentUpon>AddEditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePackageListing.resx">
+      <DependentUpon>ManagePackageListing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageProductListing.resx">
       <DependentUpon>ManageProductListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSupplierListing.resx">
+      <DependentUpon>ManageSupplierListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +171,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TravelExpertsDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="TravelExpertsDataSet.xsc">
+      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravelExpertsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TravelExpertsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TravelExpertsDataSet.xss">
+      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="TravelExpertsDB.edmx.diagram">
       <DependentUpon>TravelExpertsDB.edmx</DependentUpon>
     </None>
