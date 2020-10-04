@@ -29,39 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvPakages = new System.Windows.Forms.DataGridView();
+            this.dgvPackages = new System.Windows.Forms.DataGridView();
             this.packagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.travelExpertsDataSet = new TravelExperts.TravelExpertsDataSet();
-            this.packagesTableAdapter = new TravelExperts.TravelExpertsDataSetTableAdapters.PackagesTableAdapter();
             this.btnAddPackage = new System.Windows.Forms.Button();
             this.btnEditPackage = new System.Windows.Forms.Button();
             this.btnDeletePackage = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPakages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.packagesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvPakages
+            // dgvPackages
             // 
-            this.dgvPakages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPakages.Location = new System.Drawing.Point(21, 12);
-            this.dgvPakages.Name = "dgvPakages";
-            this.dgvPakages.Size = new System.Drawing.Size(727, 188);
-            this.dgvPakages.TabIndex = 0;
+            this.dgvPackages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPackages.Location = new System.Drawing.Point(21, 12);
+            this.dgvPackages.Name = "dgvPackages";
+            this.dgvPackages.Size = new System.Drawing.Size(727, 188);
+            this.dgvPackages.TabIndex = 0;
             // 
             // packagesBindingSource
             // 
             this.packagesBindingSource.DataMember = "Packages";
-            this.packagesBindingSource.DataSource = this.travelExpertsDataSet;
-            // 
-            // travelExpertsDataSet
-            // 
-            this.travelExpertsDataSet.DataSetName = "TravelExpertsDataSet";
-            this.travelExpertsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // packagesTableAdapter
-            // 
-            this.packagesTableAdapter.ClearBeforeFill = true;
             // 
             // btnAddPackage
             // 
@@ -101,24 +88,23 @@
             this.Controls.Add(this.btnDeletePackage);
             this.Controls.Add(this.btnEditPackage);
             this.Controls.Add(this.btnAddPackage);
-            this.Controls.Add(this.dgvPakages);
+            this.Controls.Add(this.dgvPackages);
             this.Name = "ManagePackageListing";
             this.Text = "ManagePackageListing";
             this.Load += new System.EventHandler(this.ManagePackageListing_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPakages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.packagesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private TravelExpertsDataSet travelExpertsDataSet;
+       // private TravelExpertsDataSet travelExpertsDataSet;
         private System.Windows.Forms.BindingSource packagesBindingSource;
-        private TravelExpertsDataSetTableAdapters.PackagesTableAdapter packagesTableAdapter;
+       //private TravelExpertsDataSetTableAdapters.PackagesTableAdapter packagesTableAdapter;
         private System.Windows.Forms.Button btnAddPackage;
         private System.Windows.Forms.Button btnEditPackage;
-        public System.Windows.Forms.DataGridView dgvPakages;
+        public System.Windows.Forms.DataGridView dgvPackages;
         private System.Windows.Forms.Button btnDeletePackage;
     }
 }

@@ -19,7 +19,7 @@ namespace TravelExperts
         public AddEditSupplier(ManageSupplierListing manageSupplierListing = null)
         {
             InitializeComponent();
-            lblTitle.Text = "Add New Supplier";
+            lblSupTitle.Text = "Add New Supplier";
             this.Text = "Add New Supplier";
             isEditMode = false;
             _manageSupplierListing = manageSupplierListing;
@@ -28,7 +28,7 @@ namespace TravelExperts
         public AddEditSupplier(Supplier supplierToEdit, ManageSupplierListing manageSupplierListing = null)
         {
             InitializeComponent();
-            lblTitle.Text = "Edit Suppliers";
+            lblSupTitle.Text = "Edit Suppliers";
             this.Text = "Edit Suppliers";
             _manageSupplierListing = manageSupplierListing;
 
@@ -48,8 +48,8 @@ namespace TravelExperts
 
         private void PopulateFields(Supplier supplierToEdit)
         {
-            lblSupplierId.Text = supplierToEdit.SupplierId.ToString();
-            //txtSupplier.Text = supplierToEdit.SuppName;
+            LblSupplierId.Text = supplierToEdit.SupplierId.ToString();
+            txtSupplier.Text = supplierToEdit.SupName;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace TravelExperts
                     {
                         //If in edit mode, then get the ID and retrieve the record from the database and place
                         //the result in the record object
-                        var id = int.Parse(lblSupplierId.Text);
+                        var id = int.Parse(LblSupplierId.Text);
                         supplierlisting = _db.Suppliers.FirstOrDefault(s => s.SupplierId == id);
 
                     }

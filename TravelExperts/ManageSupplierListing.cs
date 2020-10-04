@@ -23,7 +23,7 @@ namespace TravelExperts
 
         private void ManageSupplierListing_Load(object sender, EventArgs e)
         {
-
+            PopulateGrid();
         }
         //Function to PopulateGrid. Can be called anytime we need a grid refresh 
 
@@ -41,8 +41,7 @@ namespace TravelExperts
             gvSupplierList.DataSource = suppliers;
             gvSupplierList.Columns["SupplierId"].Visible = false;
         }
-
-        private void lblAddSupplier_Click(object sender, EventArgs e)
+        private void btnAddSupplier_Click(object sender, EventArgs e)
         {
             var addEditSupplier = new AddEditSupplier(this);
 
@@ -105,15 +104,9 @@ namespace TravelExperts
 
 
 
-    private void gvSupplierList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+   
 
-        }
-
-        private void btnAddSupplier_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         
 

@@ -108,11 +108,6 @@
     <Compile Include="TravelExpertsAdmin.Designer.cs">
       <DependentUpon>TravelExpertsAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="TravelExpertsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="TravelExpertsDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,17 +166,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TravelExpertsDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="TravelExpertsDataSet.xsc">
-      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TravelExpertsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TravelExpertsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TravelExpertsDataSet.xss">
-      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
-    </None>
     <None Include="TravelExpertsDB.edmx.diagram">
       <DependentUpon>TravelExpertsDB.edmx</DependentUpon>
     </None>

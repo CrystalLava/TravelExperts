@@ -35,14 +35,14 @@
             this.endDate = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.txtPackageName = new System.Windows.Forms.TextBox();
-            this.travelExpertsDataSet1 = new TravelExperts.TravelExpertsDataSet();
+           // this.travelExpertsDataSet1 = new TravelExperts.TravelExpertsDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtBasicPrice = new System.Windows.Forms.TextBox();
             this.txtAgencyCommision = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpStartDate
@@ -86,7 +86,7 @@
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Pkg. Description";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+           
             // 
             // endDate
             // 
@@ -116,8 +116,8 @@
             // 
             // travelExpertsDataSet1
             // 
-            this.travelExpertsDataSet1.DataSetName = "TravelExpertsDataSet";
-            this.travelExpertsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.travelExpertsDataSet1.DataSetName = "TravelExpertsDataSet";
+            //this.travelExpertsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -196,7 +196,7 @@
             this.Controls.Add(this.dtpStartDate);
             this.Name = "AddEditPackage";
             this.Text = "AddEditPackage";
-            ((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,7 +211,7 @@
         private System.Windows.Forms.Label endDate;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.TextBox txtPackageName;
-        private TravelExpertsDataSet travelExpertsDataSet1;
+        //private TravelExpertsDataSet travelExpertsDataSet1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSaveChanges;

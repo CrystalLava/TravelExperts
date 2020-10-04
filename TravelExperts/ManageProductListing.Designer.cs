@@ -43,7 +43,7 @@
             this.gvProductList.Name = "gvProductList";
             this.gvProductList.Size = new System.Drawing.Size(166, 192);
             this.gvProductList.TabIndex = 0;
-            this.gvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProductList_CellContentClick);
+           
             // 
             // lblAddProduct
             // 
@@ -55,7 +55,7 @@
             this.lblAddProduct.Size = new System.Drawing.Size(201, 29);
             this.lblAddProduct.TabIndex = 1;
             this.lblAddProduct.Text = "Manage Products";
-            this.lblAddProduct.Click += new System.EventHandler(this.lblAddProduct_Click);
+            
             // 
             // btnAddProduct
             // 

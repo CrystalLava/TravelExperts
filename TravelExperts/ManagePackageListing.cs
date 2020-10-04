@@ -21,15 +21,20 @@ namespace TravelExperts
 
         private void ManagePackageListing_Load(object sender, EventArgs e)
         {
-            FillPackageData();
+            try
+            {
+                PopulateGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
 
         private void btnAddPackage_Click(object sender, EventArgs e)
         {
             AddEditPackage frmAddpackage = new AddEditPackage(managePackageListing: this);
             frmAddpackage.ShowDialog();
-
-
         }
 
         private void btnEditPackage_Click(object sender, EventArgs e)
@@ -37,7 +42,7 @@ namespace TravelExperts
 
             try
             {
-                var packageId = (int)dgvPakages.CurrentRow.Cells[0].Value;
+                var packageId = (int)dgvPackages.CurrentRow.Cells[0].Value;
 
                 var package = _db.Packages.Where(p => p.PackageId == packageId).FirstOrDefault();
 
@@ -52,24 +57,24 @@ namespace TravelExperts
             }
         }
 
-        public void FillPackageData()
+        public void PopulateGrid()
         {
             var packages = _db.Packages.ToList();
 
-            dgvPakages.DataSource = packages;
-            dgvPakages.Columns["PackageId"].Visible = false;
+            dgvPackages.DataSource = packages;
+            dgvPackages.Columns["PackageId"].Visible = false;
             
-            dgvPakages.Update();
-            dgvPakages.Refresh();
+            dgvPackages.Update();
+            dgvPackages.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvPakages.DataSource = null;
-            dgvPakages.Update();
-            dgvPakages.Refresh();
+            dgvPackages.DataSource = null;
+            dgvPackages.Update();
+            dgvPackages.Refresh();
 
-            FillPackageData();
+            PopulateGrid();
         }
 
         private void btnDeletePackage_Click(object sender, EventArgs e)
@@ -78,7 +83,7 @@ namespace TravelExperts
             {
                 try
                 {
-                    var packageId = (int)dgvPakages.CurrentRow.Cells[0].Value;
+                    var packageId = (int)dgvPackages.CurrentRow.Cells[0].Value;
 
                     var package = _db.Packages.Where(p => p.PackageId == packageId).FirstOrDefault();
 
@@ -87,11 +92,11 @@ namespace TravelExperts
                     _db.SaveChanges();
                     MessageBox.Show("Package Deleted!");
 
-                    FillPackageData();
+                   PopulateGrid();
                 }
                 catch (Exception ex)
                 {
- 
+                    MessageBox.Show($"Error: {ex.Message}");
                 }
             }
         } 

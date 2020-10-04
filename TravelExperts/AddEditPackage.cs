@@ -69,21 +69,21 @@ namespace TravelExperts
                     _db.Packages.Add(newPackage);
                     _db.SaveChanges();
 
-                    MessageBox.Show("Package is added successfully!");
+                    MessageBox.Show("Package added successfully!");
 
                 }
                 else
                 {
                     //edit package
 
-                    MessageBox.Show("Package is editted successfully!");
+                    MessageBox.Show("Package edited successfully!");
                     _db.SaveChanges();
                 }
 
 
-                _managePackageListing.FillPackageData();
-  _managePackageListing.dgvPakages.Update();
-                _managePackageListing.dgvPakages.Refresh();
+                _managePackageListing.PopulateGrid();
+                _managePackageListing.dgvPackages.Update();
+                _managePackageListing.dgvPackages.Refresh();
               
 
                 AddEditPackage.ActiveForm.Close();
@@ -91,14 +91,11 @@ namespace TravelExperts
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void txtBasicPrice_Leave(object sender, EventArgs e)
         {

@@ -102,15 +102,5 @@ namespace TravelExperts
 
             //gvProductList.Refresh();
         }
-
-        private void lblAddProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gvProductList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

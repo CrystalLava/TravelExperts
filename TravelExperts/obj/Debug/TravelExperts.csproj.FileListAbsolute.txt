@@ -49,3 +49,7 @@ C:\Users\Payam\Source\Repos\CrystalLava\TravelExperts\TravelExperts\obj\Debug\Tr
 C:\Users\Payam\Source\Repos\CrystalLava\TravelExperts\TravelExperts\obj\Debug\TravelExperts.pdb
 C:\Users\Payam\Source\Repos\CrystalLava\TravelExperts\TravelExperts\obj\Debug\TravelExperts.ManagePackageListing.resources
 C:\Users\Payam\Source\Repos\CrystalLava\TravelExperts\TravelExperts\obj\Debug\TravelExperts.AddEditPackage.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.AddEditPackage.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.AddEditSupplier.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.ManagePackageListing.resources
+C:\Users\cpark\OneDrive\Desktop\TravelExperts\TravelExperts\obj\Debug\TravelExperts.ManageSupplierListing.resources

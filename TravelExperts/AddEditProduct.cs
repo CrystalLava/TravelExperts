@@ -91,7 +91,7 @@ namespace TravelExperts
                     _db.SaveChanges();
                     _manageProductListing.PopulateGrid();
 
-                    MessageBox.Show($"Product Name :{product} has been added");
+                    MessageBox.Show($"Product Name: {product} has been updated");
 
                     Close();
                 }
@@ -112,14 +112,6 @@ namespace TravelExperts
             Close();
         }
 
-        private void txtProduct_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddEditProduct_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

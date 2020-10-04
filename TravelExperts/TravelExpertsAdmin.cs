@@ -67,5 +67,14 @@ namespace TravelExperts
             };
             frmManagePackageListing.Show();
         }
+
+        private void addPackagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var addPackage = new AddEditPackage
+            {
+                MdiParent = this
+            };
+            addPackage.Show();
+        }
     }
 }

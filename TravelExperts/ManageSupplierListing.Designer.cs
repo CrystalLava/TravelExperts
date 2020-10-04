@@ -43,7 +43,7 @@
             this.gvSupplierList.Name = "gvSupplierList";
             this.gvSupplierList.Size = new System.Drawing.Size(166, 192);
             this.gvSupplierList.TabIndex = 1;
-            this.gvSupplierList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSupplierList_CellContentClick);
+
             // 
             // btnAddSupplier
             // 
@@ -85,7 +85,7 @@
             this.lblAddSupplier.Size = new System.Drawing.Size(209, 29);
             this.lblAddSupplier.TabIndex = 6;
             this.lblAddSupplier.Text = "Manage Suppliers";
-            this.lblAddSupplier.Click += new System.EventHandler(this.lblAddSupplier_Click);
+            
             // 
             // ManageSupplierListing
             // 
