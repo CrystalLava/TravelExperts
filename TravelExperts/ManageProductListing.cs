@@ -24,7 +24,7 @@ namespace TravelExperts
 
         private void ManageProductListing_Load(object sender, EventArgs e)
         {
-
+            PopulateGrid();
         }
         //Function to PopulateGrid. Can be called anytime we need a grid refresh   
         public void PopulateGrid()

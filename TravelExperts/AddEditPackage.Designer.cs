@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PkgStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.startDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.endDate = new System.Windows.Forms.Label();
-            this.PkgEndDate = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.txtPackageName = new System.Windows.Forms.TextBox();
             this.travelExpertsDataSet1 = new TravelExperts.TravelExpertsDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.PkgBasicPrice = new System.Windows.Forms.NumericUpDown();
-            this.PkgAgencyCommision = new System.Windows.Forms.NumericUpDown();
+            this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtBasicPrice = new System.Windows.Forms.TextBox();
+            this.txtAgencyCommision = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PkgBasicPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PkgAgencyCommision)).BeginInit();
             this.SuspendLayout();
             // 
-            // PkgStartDate
+            // dtpStartDate
             // 
-            this.PkgStartDate.Location = new System.Drawing.Point(163, 233);
-            this.PkgStartDate.Name = "PkgStartDate";
-            this.PkgStartDate.Size = new System.Drawing.Size(200, 20);
-            this.PkgStartDate.TabIndex = 0;
+            this.dtpStartDate.Location = new System.Drawing.Point(163, 233);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpStartDate.TabIndex = 0;
             // 
             // startDate
             // 
@@ -63,7 +62,6 @@
             this.startDate.Size = new System.Drawing.Size(55, 13);
             this.startDate.TabIndex = 1;
             this.startDate.Text = "Start Date";
-            this.startDate.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -88,6 +86,7 @@
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Pkg. Description";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // endDate
             // 
@@ -101,27 +100,19 @@
             this.endDate.Text = "End Date";
             this.endDate.UseWaitCursor = true;
             // 
-            // PkgEndDate
+            // dtpEndDate
             // 
-            this.PkgEndDate.Location = new System.Drawing.Point(163, 273);
-            this.PkgEndDate.Name = "PkgEndDate";
-            this.PkgEndDate.Size = new System.Drawing.Size(200, 20);
-            this.PkgEndDate.TabIndex = 5;
+            this.dtpEndDate.Location = new System.Drawing.Point(163, 273);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpEndDate.TabIndex = 5;
             // 
-            // textBox1
+            // txtPackageName
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(163, 77);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(200, 136);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.txtPackageName.Location = new System.Drawing.Point(163, 42);
+            this.txtPackageName.Name = "txtPackageName";
+            this.txtPackageName.Size = new System.Drawing.Size(200, 20);
+            this.txtPackageName.TabIndex = 6;
             // 
             // travelExpertsDataSet1
             // 
@@ -152,42 +143,60 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Pkg. Agnc. Commision";
             // 
-            // PkgBasicPrice
+            // btnSaveChanges
             // 
-            this.PkgBasicPrice.Location = new System.Drawing.Point(163, 314);
-            this.PkgBasicPrice.Name = "PkgBasicPrice";
-            this.PkgBasicPrice.Size = new System.Drawing.Size(120, 20);
-            this.PkgBasicPrice.TabIndex = 10;
+            this.btnSaveChanges.Location = new System.Drawing.Point(163, 397);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(120, 35);
+            this.btnSaveChanges.TabIndex = 12;
+            this.btnSaveChanges.Text = "Save Changes";
+            this.btnSaveChanges.UseVisualStyleBackColor = true;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
-            // PkgAgencyCommision
+            // txtDescription
             // 
-            this.PkgAgencyCommision.Location = new System.Drawing.Point(163, 355);
-            this.PkgAgencyCommision.Name = "PkgAgencyCommision";
-            this.PkgAgencyCommision.Size = new System.Drawing.Size(120, 20);
-            this.PkgAgencyCommision.TabIndex = 11;
+            this.txtDescription.Location = new System.Drawing.Point(163, 77);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(200, 138);
+            this.txtDescription.TabIndex = 13;
+            // 
+            // txtBasicPrice
+            // 
+            this.txtBasicPrice.Location = new System.Drawing.Point(163, 322);
+            this.txtBasicPrice.Name = "txtBasicPrice";
+            this.txtBasicPrice.Size = new System.Drawing.Size(200, 20);
+            this.txtBasicPrice.TabIndex = 14;
+            this.txtBasicPrice.Leave += new System.EventHandler(this.txtBasicPrice_Leave);
+            // 
+            // txtAgencyCommision
+            // 
+            this.txtAgencyCommision.Location = new System.Drawing.Point(163, 352);
+            this.txtAgencyCommision.Name = "txtAgencyCommision";
+            this.txtAgencyCommision.Size = new System.Drawing.Size(200, 20);
+            this.txtAgencyCommision.TabIndex = 14;
             // 
             // AddEditPackage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 392);
-            this.Controls.Add(this.PkgAgencyCommision);
-            this.Controls.Add(this.PkgBasicPrice);
+            this.ClientSize = new System.Drawing.Size(395, 444);
+            this.Controls.Add(this.txtAgencyCommision);
+            this.Controls.Add(this.txtBasicPrice);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.PkgEndDate);
+            this.Controls.Add(this.txtPackageName);
+            this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.endDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startDate);
-            this.Controls.Add(this.PkgStartDate);
+            this.Controls.Add(this.dtpStartDate);
             this.Name = "AddEditPackage";
             this.Text = "AddEditPackage";
             ((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PkgBasicPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PkgAgencyCommision)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,18 +204,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker PkgStartDate;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Label startDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label endDate;
-        private System.Windows.Forms.DateTimePicker PkgEndDate;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.TextBox txtPackageName;
         private TravelExpertsDataSet travelExpertsDataSet1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown PkgBasicPrice;
-        private System.Windows.Forms.NumericUpDown PkgAgencyCommision;
+        private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.TextBox txtBasicPrice;
+        private System.Windows.Forms.TextBox txtAgencyCommision;
     }
 }
