@@ -35,14 +35,12 @@
             this.endDate = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.txtPackageName = new System.Windows.Forms.TextBox();
-           // this.travelExpertsDataSet1 = new TravelExperts.TravelExpertsDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtBasicPrice = new System.Windows.Forms.TextBox();
             this.txtAgencyCommision = new System.Windows.Forms.TextBox();
-            //((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpStartDate
@@ -86,7 +84,6 @@
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Pkg. Description";
-           
             // 
             // endDate
             // 
@@ -114,22 +111,17 @@
             this.txtPackageName.Size = new System.Drawing.Size(200, 20);
             this.txtPackageName.TabIndex = 6;
             // 
-            // travelExpertsDataSet1
-            // 
-            //this.travelExpertsDataSet1.DataSetName = "TravelExpertsDataSet";
-            //this.travelExpertsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(55, 321);
+            this.label3.Location = new System.Drawing.Point(68, 329);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Pkg. Basic Price";
+            this.label3.Text = "Pkg. Base Price";
             // 
             // label4
             // 
@@ -137,11 +129,11 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Green;
-            this.label4.Location = new System.Drawing.Point(27, 355);
+            this.label4.Location = new System.Drawing.Point(27, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 13);
+            this.label4.Size = new System.Drawing.Size(124, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Pkg. Agnc. Commision";
+            this.label4.Text = "Pkg. Agency  Commision";
             // 
             // btnSaveChanges
             // 
@@ -167,7 +159,6 @@
             this.txtBasicPrice.Name = "txtBasicPrice";
             this.txtBasicPrice.Size = new System.Drawing.Size(200, 20);
             this.txtBasicPrice.TabIndex = 14;
-            this.txtBasicPrice.Leave += new System.EventHandler(this.txtBasicPrice_Leave);
             // 
             // txtAgencyCommision
             // 
@@ -196,7 +187,6 @@
             this.Controls.Add(this.dtpStartDate);
             this.Name = "AddEditPackage";
             this.Text = "AddEditPackage";
-            //((System.ComponentModel.ISupportInitialize)(this.travelExpertsDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

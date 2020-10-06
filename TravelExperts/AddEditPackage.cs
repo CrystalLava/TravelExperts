@@ -41,69 +41,131 @@ namespace TravelExperts
             }
         }
 
-        private void btnSaveChanges_Click(object sender, EventArgs e)
-        {
+         private void btnSaveChanges_Click(object sender, EventArgs e)
+         {
 
-            try
-            {
-                Package newPackage = new Package();
+             try
+             {
+                 if (string.IsNullOrWhiteSpace(txtPackageName.Text))
+                 {
+                     MessageBox.Show("Package name can't be empty!");
 
-                if (packageTemp != null)
+                     return;
+                 }
+                 if (string.IsNullOrWhiteSpace(txtDescription.Text))
+                 {
+                     MessageBox.Show("How would you describe the package?");
+
+                     return;
+                 }
+
+
+                if (dtpStartDate.Value > dtpEndDate.Value)
                 {
-                    newPackage = _db.Packages.FirstOrDefault(p => p.PackageId == packageTemp.PackageId);
+                    MessageBox.Show("Package End Date must be later than Package Start Date!");
+
+                    return;
                 }
 
+                if (string.IsNullOrWhiteSpace(txtBasicPrice.Text))
+                 {
+                     MessageBox.Show("What's the Base Price of the Package?");
 
-                newPackage.PkgName = txtPackageName.Text;
-                newPackage.PkgDesc = txtDescription.Text;
-                newPackage.PkgStartDate = dtpStartDate.Value;
-                newPackage.PkgEndDate = dtpEndDate.Value;
-                newPackage.PkgBasePrice = decimal.Parse(txtBasicPrice.Text);
-                newPackage.PkgAgencyCommission = decimal.Parse(txtAgencyCommision.Text);
+                     return;
+                 }
 
+                 if (string.IsNullOrWhiteSpace(txtAgencyCommision.Text))
+                 {
+                     MessageBox.Show("Agency Commission can't be empty!");
 
+                     return;
+                 }
 
-                if (packageTemp == null)
-                {
-                    // add package
-                    _db.Packages.Add(newPackage);
-                    _db.SaveChanges();
+                decimal d = 0;
+                 if (!decimal.TryParse(txtBasicPrice.Text, out d))
+                 {
+                     //Error
 
-                    MessageBox.Show("Package added successfully!");
+                     MessageBox.Show("Error: Wrong format for Base Price!");
 
-                }
-                else
-                {
-                    //edit package
-
-                    MessageBox.Show("Package edited successfully!");
-                    _db.SaveChanges();
-                }
+                     return;
+                 }
 
 
-                _managePackageListing.PopulateGrid();
-                _managePackageListing.dgvPackages.Update();
-                _managePackageListing.dgvPackages.Refresh();
-              
 
-                AddEditPackage.ActiveForm.Close();
+                 if (!decimal.TryParse(txtAgencyCommision.Text, out d))
+                 {
+                     //Error
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-        }
+                     MessageBox.Show("Error: Wrong format for Agency Commission!");
 
-  
+                     return;
+                 }
 
-        private void txtBasicPrice_Leave(object sender, EventArgs e)
-        {
-            //Double value;
-            //if (Double.TryParse(txtBasicPrice.Text, out value))
-            //    txtBasicPrice.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", value);
-            //else
-            //    txtBasicPrice.Text = String.Empty;
-        }
-    }
-}
+                 var basicPrice = decimal.Parse(txtBasicPrice.Text);
+                 var agencyCommision = decimal.Parse(txtAgencyCommision.Text);
+
+                 if (agencyCommision > basicPrice)
+                 {
+                     MessageBox.Show("Agency Commission can't be greater than Base Price!");
+
+                     return;
+                 }
+
+
+                 Package newPackage = new Package();
+    
+                 if (packageTemp != null)
+                 {
+                     newPackage = _db.Packages.FirstOrDefault(p => p.PackageId == packageTemp.PackageId);
+                 }
+
+
+                 newPackage.PkgName = txtPackageName.Text;
+                 newPackage.PkgDesc = txtDescription.Text;
+                 newPackage.PkgStartDate = dtpStartDate.Value;
+                 newPackage.PkgEndDate = dtpEndDate.Value;
+                 newPackage.PkgBasePrice = decimal.Parse(txtBasicPrice.Text);
+                 newPackage.PkgAgencyCommission = decimal.Parse(txtAgencyCommision.Text);
+
+
+
+                 if (packageTemp == null)
+                 {
+                     // add package
+                     _db.Packages.Add(newPackage);
+                     _db.SaveChanges();
+
+                     MessageBox.Show("Package added successfully!");
+
+                 }
+                 else
+                 {
+                     //edit package
+
+                     MessageBox.Show("Package edited successfully!");
+                     _db.SaveChanges();
+                 }
+                 
+                 _managePackageListing.PopulateGrid();
+                 _managePackageListing.dgvPackages.Update();
+                 _managePackageListing.dgvPackages.Refresh();
+
+                 this.Close();
+
+             }
+             catch (Exception ex)
+             {
+
+
+                 MessageBox.Show(ex.Message);
+
+                 MessageBox.Show($"Error: {ex.Message}");
+
+             }
+         }
+
+     }
+ }
+
+

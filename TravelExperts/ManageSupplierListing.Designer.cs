@@ -41,9 +41,8 @@
             this.gvSupplierList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvSupplierList.Location = new System.Drawing.Point(23, 97);
             this.gvSupplierList.Name = "gvSupplierList";
-            this.gvSupplierList.Size = new System.Drawing.Size(166, 192);
+            this.gvSupplierList.Size = new System.Drawing.Size(225, 192);
             this.gvSupplierList.TabIndex = 1;
-
             // 
             // btnAddSupplier
             // 
@@ -79,19 +78,18 @@
             // 
             this.lblAddSupplier.AutoSize = true;
             this.lblAddSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddSupplier.Location = new System.Drawing.Point(77, 27);
+            this.lblAddSupplier.Location = new System.Drawing.Point(62, 30);
             this.lblAddSupplier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddSupplier.Name = "lblAddSupplier";
             this.lblAddSupplier.Size = new System.Drawing.Size(209, 29);
             this.lblAddSupplier.TabIndex = 6;
             this.lblAddSupplier.Text = "Manage Suppliers";
-            
             // 
             // ManageSupplierListing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 356);
+            this.ClientSize = new System.Drawing.Size(375, 352);
             this.Controls.Add(this.lblAddSupplier);
             this.Controls.Add(this.btnDeleteSupplier);
             this.Controls.Add(this.btnEditSupplier);

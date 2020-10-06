@@ -13,8 +13,8 @@ namespace TravelExperts
     public partial class AddEditSupplier : Form
     {
         private readonly TravelExpertsEntities _db;
-        private ManageSupplierListing _manageSupplierListing;
-        private bool isEditMode;
+        private readonly ManageSupplierListing _manageSupplierListing;
+        private readonly bool isEditMode;
 
         public AddEditSupplier(ManageSupplierListing manageSupplierListing = null)
         {
@@ -48,7 +48,7 @@ namespace TravelExperts
 
         private void PopulateFields(Supplier supplierToEdit)
         {
-            LblSupplierId.Text = supplierToEdit.SupplierId.ToString();
+            lblSupplierId.Text = supplierToEdit.SupplierId.ToString();
             txtSupplier.Text = supplierToEdit.SupName;
         }
 
@@ -76,7 +76,7 @@ namespace TravelExperts
                     {
                         //If in edit mode, then get the ID and retrieve the record from the database and place
                         //the result in the record object
-                        var id = int.Parse(LblSupplierId.Text);
+                        var id = int.Parse(lblSupplierId.Text);
                         supplierlisting = _db.Suppliers.FirstOrDefault(s => s.SupplierId == id);
 
                     }
@@ -112,14 +112,5 @@ namespace TravelExperts
             Close();
         }
 
-        private void txtSupplier_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddEditSupplier_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

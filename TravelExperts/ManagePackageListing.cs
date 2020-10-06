@@ -56,8 +56,28 @@ namespace TravelExperts
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+         public void PopulateGrid()
+        {
+            var packages = _db.Packages.AsNoTracking().ToList();
 
-        public void PopulateGrid()
+
+            //dgvPakages.DataSource = typeof(List<>);
+            dgvPackages.DataSource = packages;
+            dgvPackages.Columns["PackageId"].Visible = false;
+
+            dgvPackages.EndEdit();
+           
+            dgvPackages.Update();
+            dgvPackages.Refresh();
+
+            /*dgvPackages.DataSource = packages;
+            dgvPackages.Columns["PackageId"].Visible = false;
+            
+            dgvPackages.Update();
+            dgvPackages.Refresh();*/
+
+        }
+        /*public void PopulateGrid()
         {
             var packages = _db.Packages.ToList();
 
@@ -66,7 +86,7 @@ namespace TravelExperts
             
             dgvPackages.Update();
             dgvPackages.Refresh();
-        }
+        }*/
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -102,3 +122,4 @@ namespace TravelExperts
         } 
     }
 }
+

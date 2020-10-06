@@ -32,7 +32,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblSupTitle = new System.Windows.Forms.Label();
-            this.LblSupplierId = new System.Windows.Forms.Label();
+            this.lblSupplierId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSupplier
@@ -71,21 +71,21 @@
             this.lblSupTitle.Size = new System.Drawing.Size(0, 27);
             this.lblSupTitle.TabIndex = 3;
             // 
-            // LblSupplierId
+            // lblSupplierId
             // 
-            this.LblSupplierId.AutoSize = true;
-            this.LblSupplierId.Location = new System.Drawing.Point(48, 74);
-            this.LblSupplierId.Name = "LblSupplierId";
-            this.LblSupplierId.Size = new System.Drawing.Size(0, 13);
-            this.LblSupplierId.TabIndex = 4;
-            this.LblSupplierId.Visible = false;
+            this.lblSupplierId.AutoSize = true;
+            this.lblSupplierId.Location = new System.Drawing.Point(48, 74);
+            this.lblSupplierId.Name = "lblSupplierId";
+            this.lblSupplierId.Size = new System.Drawing.Size(0, 13);
+            this.lblSupplierId.TabIndex = 4;
+            this.lblSupplierId.Visible = false;
             // 
             // AddEditSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 232);
-            this.Controls.Add(this.LblSupplierId);
+            this.Controls.Add(this.lblSupplierId);
             this.Controls.Add(this.lblSupTitle);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -93,7 +93,6 @@
             this.Font = new System.Drawing.Font("Bell MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddEditSupplier";
             this.Text = "Add Suppliers";
-            this.Load += new System.EventHandler(this.AddEditSupplier_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +105,6 @@
         private System.Windows.Forms.Button btnCancel;
    
         private System.Windows.Forms.Label lblSupTitle;
-        private System.Windows.Forms.Label LblSupplierId;
+        private System.Windows.Forms.Label lblSupplierId;
     }
 }

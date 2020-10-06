@@ -13,8 +13,8 @@ namespace TravelExperts
     public partial class AddEditProduct : Form
     {
         private readonly TravelExpertsEntities _db;
-        private ManageProductListing _manageProductListing;
-        private bool isEditMode;
+        private readonly ManageProductListing _manageProductListing;
+        private readonly bool isEditMode;
      
         public AddEditProduct(ManageProductListing manageProductListing = null)
         {
