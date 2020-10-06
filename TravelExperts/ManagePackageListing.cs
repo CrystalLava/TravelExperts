@@ -58,10 +58,20 @@ namespace TravelExperts
         }
          public void PopulateGrid()
         {
+            /*var packages = _db.Packages.Select(p => new
+            {
+                Package = p.PkgName,
+                StartDate = p.PkgStartDate,
+                EndDate = p.PkgEndDate,
+                Description = p.PkgDesc,
+                BasePrice = p.PkgBasePrice,
+                Commission =p.PkgAgencyCommission,
+                p.PackageId
+            })
+               .ToList();*/
+
+
             var packages = _db.Packages.AsNoTracking().ToList();
-
-
-            //dgvPakages.DataSource = typeof(List<>);
             dgvPackages.DataSource = packages;
             dgvPackages.Columns["PackageId"].Visible = false;
 
@@ -69,24 +79,8 @@ namespace TravelExperts
            
             dgvPackages.Update();
             dgvPackages.Refresh();
-
-            /*dgvPackages.DataSource = packages;
-            dgvPackages.Columns["PackageId"].Visible = false;
-            
-            dgvPackages.Update();
-            dgvPackages.Refresh();*/
-
         }
-        /*public void PopulateGrid()
-        {
-            var packages = _db.Packages.ToList();
-
-            dgvPackages.DataSource = packages;
-            dgvPackages.Columns["PackageId"].Visible = false;
-            
-            dgvPackages.Update();
-            dgvPackages.Refresh();
-        }*/
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -99,7 +93,7 @@ namespace TravelExperts
 
         private void btnDeletePackage_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("You're about to delete the package, sure?","Delete Action", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(MessageBox.Show("Delete Package?","Delete Action", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {

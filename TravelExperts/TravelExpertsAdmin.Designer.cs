@@ -43,37 +43,45 @@
             this.manageSuppliersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(920, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(967, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // managePackagesToolStripMenuItem
             // 
+            this.managePackagesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.managePackagesToolStripMenuItem.Name = "managePackagesToolStripMenuItem";
-            this.managePackagesToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.managePackagesToolStripMenuItem.Size = new System.Drawing.Size(126, 21);
             this.managePackagesToolStripMenuItem.Text = "Manage Packages";
             this.managePackagesToolStripMenuItem.Click += new System.EventHandler(this.managePackagesToolStripMenuItem_Click);
             // 
             // manageProductsToolStripMenuItem
             // 
+            this.manageProductsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
-            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(123, 21);
             this.manageProductsToolStripMenuItem.Text = "Manage Products";
             this.manageProductsToolStripMenuItem.Click += new System.EventHandler(this.manageProductsToolStripMenuItem_Click);
             // 
             // manageSuppliersToolStripMenuItem
             // 
+            this.manageSuppliersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageSuppliersToolStripMenuItem.Name = "manageSuppliersToolStripMenuItem";
-            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.manageSuppliersToolStripMenuItem.Size = new System.Drawing.Size(126, 21);
             this.manageSuppliersToolStripMenuItem.Text = "Manage Suppliers";
             this.manageSuppliersToolStripMenuItem.Click += new System.EventHandler(this.manageSuppliersToolStripMenuItem_Click);
             // 
             // TravelExpertsAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 519);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::TravelExperts.Properties.Resources.mountain3;
+            this.ClientSize = new System.Drawing.Size(967, 593);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TravelExpertsAdmin";

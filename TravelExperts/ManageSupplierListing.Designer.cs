@@ -38,63 +38,74 @@
             // 
             // gvSupplierList
             // 
+            this.gvSupplierList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.gvSupplierList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvSupplierList.Location = new System.Drawing.Point(23, 97);
+            this.gvSupplierList.Location = new System.Drawing.Point(27, 89);
+            this.gvSupplierList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gvSupplierList.Name = "gvSupplierList";
-            this.gvSupplierList.Size = new System.Drawing.Size(225, 192);
+            this.gvSupplierList.Size = new System.Drawing.Size(169, 251);
             this.gvSupplierList.TabIndex = 1;
             // 
             // btnAddSupplier
             // 
-            this.btnAddSupplier.Location = new System.Drawing.Point(254, 97);
+            this.btnAddSupplier.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddSupplier.Location = new System.Drawing.Point(228, 90);
+            this.btnAddSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddSupplier.Name = "btnAddSupplier";
-            this.btnAddSupplier.Size = new System.Drawing.Size(75, 23);
+            this.btnAddSupplier.Size = new System.Drawing.Size(87, 30);
             this.btnAddSupplier.TabIndex = 3;
             this.btnAddSupplier.Text = "Add Supplier";
-            this.btnAddSupplier.UseVisualStyleBackColor = true;
+            this.btnAddSupplier.UseVisualStyleBackColor = false;
             this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
             // btnEditSupplier
             // 
-            this.btnEditSupplier.Location = new System.Drawing.Point(254, 181);
+            this.btnEditSupplier.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnEditSupplier.Location = new System.Drawing.Point(228, 197);
+            this.btnEditSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditSupplier.Name = "btnEditSupplier";
-            this.btnEditSupplier.Size = new System.Drawing.Size(75, 23);
+            this.btnEditSupplier.Size = new System.Drawing.Size(87, 30);
             this.btnEditSupplier.TabIndex = 4;
             this.btnEditSupplier.Text = "Edit ";
-            this.btnEditSupplier.UseVisualStyleBackColor = true;
+            this.btnEditSupplier.UseVisualStyleBackColor = false;
             this.btnEditSupplier.Click += new System.EventHandler(this.btnEditSupplier_Click);
             // 
             // btnDeleteSupplier
             // 
-            this.btnDeleteSupplier.Location = new System.Drawing.Point(254, 266);
+            this.btnDeleteSupplier.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDeleteSupplier.Location = new System.Drawing.Point(227, 311);
+            this.btnDeleteSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteSupplier.Name = "btnDeleteSupplier";
-            this.btnDeleteSupplier.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteSupplier.Size = new System.Drawing.Size(87, 30);
             this.btnDeleteSupplier.TabIndex = 5;
             this.btnDeleteSupplier.Text = "Delete ";
-            this.btnDeleteSupplier.UseVisualStyleBackColor = true;
+            this.btnDeleteSupplier.UseVisualStyleBackColor = false;
             this.btnDeleteSupplier.Click += new System.EventHandler(this.btnDeleteSupplier_Click);
             // 
             // lblAddSupplier
             // 
             this.lblAddSupplier.AutoSize = true;
-            this.lblAddSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddSupplier.Location = new System.Drawing.Point(62, 30);
-            this.lblAddSupplier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddSupplier.Font = new System.Drawing.Font("Segoe UI Symbol", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddSupplier.Location = new System.Drawing.Point(61, 30);
+            this.lblAddSupplier.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblAddSupplier.Name = "lblAddSupplier";
-            this.lblAddSupplier.Size = new System.Drawing.Size(209, 29);
+            this.lblAddSupplier.Size = new System.Drawing.Size(207, 32);
             this.lblAddSupplier.TabIndex = 6;
             this.lblAddSupplier.Text = "Manage Suppliers";
             // 
             // ManageSupplierListing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 352);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(353, 366);
             this.Controls.Add(this.lblAddSupplier);
             this.Controls.Add(this.btnDeleteSupplier);
             this.Controls.Add(this.btnEditSupplier);
             this.Controls.Add(this.btnAddSupplier);
             this.Controls.Add(this.gvSupplierList);
+            this.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ManageSupplierListing";
             this.Text = "Manage Suppliers";
             this.Load += new System.EventHandler(this.ManageSupplierListing_Load);

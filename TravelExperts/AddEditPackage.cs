@@ -34,10 +34,10 @@ namespace TravelExperts
                 if (package.PkgEndDate.HasValue)
                     dtpEndDate.Value = package.PkgEndDate.Value;
 
-                txtBasicPrice.Text = package.PkgBasePrice.ToString();
+                txtBasicPrice.Text = package.PkgBasePrice.ToString("C");
 
                 if (package.PkgAgencyCommission.HasValue)
-                    txtAgencyCommision.Text = package.PkgAgencyCommission.Value.ToString();
+                    txtAgencyCommision.Text = package.PkgAgencyCommission.Value.ToString("C");
             }
         }
 
@@ -69,14 +69,14 @@ namespace TravelExperts
 
                 if (string.IsNullOrWhiteSpace(txtBasicPrice.Text))
                  {
-                     MessageBox.Show("What's the Base Price of the Package?");
+                     MessageBox.Show("Base Price cannot be empty?");
 
                      return;
                  }
 
                  if (string.IsNullOrWhiteSpace(txtAgencyCommision.Text))
                  {
-                     MessageBox.Show("Agency Commission can't be empty!");
+                     MessageBox.Show("Agency Commission cannot be empty!");
 
                      return;
                  }
@@ -165,7 +165,11 @@ namespace TravelExperts
              }
          }
 
-     }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
  }
 
 

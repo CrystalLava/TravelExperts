@@ -149,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TravelExpertsAdmin.resx">
       <DependentUpon>TravelExpertsAdmin.cs</DependentUpon>
@@ -174,6 +175,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mountain3.jpg" />
     <Content Include="TravelExpertsDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TravelExpertsDB.edmx</DependentUpon>
