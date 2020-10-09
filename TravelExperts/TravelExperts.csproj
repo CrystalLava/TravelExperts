@@ -141,6 +141,9 @@
     <EmbeddedResource Include="AddEditProduct.resx">
       <DependentUpon>AddEditProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddEditProductSupplier.resx">
+      <DependentUpon>AddEditProductSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEditSupplier.resx">
       <DependentUpon>AddEditSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageProductListing.resx">
       <DependentUpon>ManageProductListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProductSupplier.resx">
+      <DependentUpon>ManageProductSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageSupplierListing.resx">
       <DependentUpon>ManageSupplierListing.cs</DependentUpon>
