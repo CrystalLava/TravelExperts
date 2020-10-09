@@ -34,10 +34,10 @@ namespace TravelExperts
                 if (package.PkgEndDate.HasValue)
                     dtpEndDate.Value = package.PkgEndDate.Value;
 
-                txtBasicPrice.Text = package.PkgBasePrice.ToString("C");
+                txtBasicPrice.Text = package.PkgBasePrice.ToString();
 
                 if (package.PkgAgencyCommission.HasValue)
-                    txtAgencyCommision.Text = package.PkgAgencyCommission.Value.ToString("C");
+                    txtAgencyCommision.Text = package.PkgAgencyCommission.Value.ToString();
             }
         }
 
