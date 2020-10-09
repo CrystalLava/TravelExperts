@@ -32,6 +32,7 @@
             this.managePackagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageSuppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageProductSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.managePackagesToolStripMenuItem,
             this.manageProductsToolStripMenuItem,
-            this.manageSuppliersToolStripMenuItem});
+            this.manageSuppliersToolStripMenuItem,
+            this.manageProductSupplierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -72,6 +74,13 @@
             this.manageSuppliersToolStripMenuItem.Text = "Manage Suppliers";
             this.manageSuppliersToolStripMenuItem.Click += new System.EventHandler(this.manageSuppliersToolStripMenuItem_Click);
             // 
+            // manageProductSupplierToolStripMenuItem
+            // 
+            this.manageProductSupplierToolStripMenuItem.Name = "manageProductSupplierToolStripMenuItem";
+            this.manageProductSupplierToolStripMenuItem.Size = new System.Drawing.Size(147, 21);
+            this.manageProductSupplierToolStripMenuItem.Text = "ManageProductSupplier";
+            this.manageProductSupplierToolStripMenuItem.Click += new System.EventHandler(this.manageProductSupplierToolStripMenuItem_Click);
+            // 
             // TravelExpertsAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -99,5 +108,6 @@
         private System.Windows.Forms.ToolStripMenuItem manageProductsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageSuppliersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managePackagesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageProductSupplierToolStripMenuItem;
     }
 }
