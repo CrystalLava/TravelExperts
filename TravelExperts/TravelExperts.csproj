@@ -61,12 +61,6 @@
     <Compile Include="AddEditProduct.Designer.cs">
       <DependentUpon>AddEditProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEditProductSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddEditProductSupplier.Designer.cs">
-      <DependentUpon>AddEditProductSupplier.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddEditSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,12 +78,6 @@
     </Compile>
     <Compile Include="ManageProductListing.Designer.cs">
       <DependentUpon>ManageProductListing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageProductSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageProductSupplier.Designer.cs">
-      <DependentUpon>ManageProductSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageSupplierListing.cs">
       <SubType>Form</SubType>
@@ -141,9 +129,6 @@
     <EmbeddedResource Include="AddEditProduct.resx">
       <DependentUpon>AddEditProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEditProductSupplier.resx">
-      <DependentUpon>AddEditProductSupplier.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddEditSupplier.resx">
       <DependentUpon>AddEditSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,9 +137,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageProductListing.resx">
       <DependentUpon>ManageProductListing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageProductSupplier.resx">
-      <DependentUpon>ManageProductSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageSupplierListing.resx">
       <DependentUpon>ManageSupplierListing.cs</DependentUpon>

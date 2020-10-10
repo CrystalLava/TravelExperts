@@ -79,7 +79,6 @@
             this.manageProductSupplierToolStripMenuItem.Name = "manageProductSupplierToolStripMenuItem";
             this.manageProductSupplierToolStripMenuItem.Size = new System.Drawing.Size(147, 21);
             this.manageProductSupplierToolStripMenuItem.Text = "ManageProductSupplier";
-            this.manageProductSupplierToolStripMenuItem.Click += new System.EventHandler(this.manageProductSupplierToolStripMenuItem_Click);
             // 
             // TravelExpertsAdmin
             // 

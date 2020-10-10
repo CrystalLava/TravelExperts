@@ -1,22 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {}
+    "C:\\Users\\mabservi\\source\\repos\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {
+    "C:\\Users\\mabservi\\source\\repos\\TravelExperts\\TravelExperts\\TravelExperts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+        "projectUniqueName": "C:\\Users\\mabservi\\source\\repos\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
         "projectName": "TravelExperts",
-        "projectPath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
-        "packagesPath": "C:\\Users\\cpark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cpark\\OneDrive\\Desktop\\TravelExperts\\TravelExperts\\obj\\",
+        "projectPath": "C:\\Users\\mabservi\\source\\repos\\TravelExperts\\TravelExperts\\TravelExperts.csproj",
+        "packagesPath": "C:\\Users\\mabservi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mabservi\\source\\repos\\TravelExperts\\TravelExperts\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cpark\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mabservi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
