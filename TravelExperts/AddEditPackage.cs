@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TravelExperts
@@ -43,7 +37,7 @@ namespace TravelExperts
 
          private void btnSaveChanges_Click(object sender, EventArgs e)
          {
-
+            //Validations for Packages when Save Button is clicked
              try
              {
                  if (string.IsNullOrWhiteSpace(txtPackageName.Text))
@@ -164,7 +158,7 @@ namespace TravelExperts
 
              }
          }
-
+        //Cancel button closes this window
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();

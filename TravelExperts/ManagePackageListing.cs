@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TravelExperts
@@ -21,6 +16,7 @@ namespace TravelExperts
 
         private void ManagePackageListing_Load(object sender, EventArgs e)
         {
+            //Load Packages from Database
             try
             {
                 PopulateGrid();
@@ -31,12 +27,14 @@ namespace TravelExperts
             }
         }
 
+        //Click this to Add a Package
         private void btnAddPackage_Click(object sender, EventArgs e)
         {
             AddEditPackage frmAddpackage = new AddEditPackage(managePackageListing: this);
             frmAddpackage.ShowDialog();
         }
 
+        //Click this to edit a package
         private void btnEditPackage_Click(object sender, EventArgs e)
         {
 
@@ -56,21 +54,10 @@ namespace TravelExperts
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
+        //Populate Grid after each edit/update/add/etc
          public void PopulateGrid()
         {
-            /*var packages = _db.Packages.Select(p => new
-            {
-                Package = p.PkgName,
-                StartDate = p.PkgStartDate,
-                EndDate = p.PkgEndDate,
-                Description = p.PkgDesc,
-                BasePrice = p.PkgBasePrice,
-                Commission =p.PkgAgencyCommission,
-                p.PackageId
-            })
-               .ToList();*/
-
-
             var packages = _db.Packages.AsNoTracking().ToList();
             dgvPackages.DataSource = packages;
             dgvPackages.Columns["PackageId"].Visible = false;
@@ -91,6 +78,7 @@ namespace TravelExperts
             PopulateGrid();
         }
 
+        //Delete Package
         private void btnDeletePackage_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Delete Package?","Delete Action", MessageBoxButtons.YesNo) == DialogResult.Yes)

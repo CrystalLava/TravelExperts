@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TravelExperts
@@ -16,6 +10,7 @@ namespace TravelExperts
         private readonly ManageProductListing _manageProductListing;
         private readonly bool isEditMode;
      
+        //Using same window form for Add Edit. Titles will be different depending on if it was add or edit
         public AddEditProduct(ManageProductListing manageProductListing = null)
         {
             InitializeComponent();            
@@ -32,6 +27,7 @@ namespace TravelExperts
             this.Text = "Edit Products";
             _manageProductListing = manageProductListing;
 
+            //Validation
             if (productToEdit == null)
             {
                 MessageBox.Show("Please ensure you selected a valid Product to edit");
@@ -107,6 +103,7 @@ namespace TravelExperts
             }
         }
 
+        //Cancel button closes this window
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();

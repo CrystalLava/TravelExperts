@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TravelExperts
 {
+    //Menu bar at top of Main page. When you click on each one, a new window will appear
     public partial class TravelExpertsAdmin : Form
-    {/// <summary>
-    /// I have made this change
-    /// </summary>
+    {
         public TravelExpertsAdmin()
         {
             InitializeComponent();

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TravelExperts
@@ -16,6 +10,7 @@ namespace TravelExperts
         private readonly ManageSupplierListing _manageSupplierListing;
         private readonly bool isEditMode;
 
+        //Using same window form for Add Edit. Titles will be different depending on if it was add or edit
         public AddEditSupplier(ManageSupplierListing manageSupplierListing = null)
         {
             InitializeComponent();
@@ -46,6 +41,7 @@ namespace TravelExperts
 
         }
 
+        
         private void PopulateFields(Supplier supplierToEdit)
         {
             lblSupplierId.Text = supplierToEdit.SupplierId.ToString();
@@ -54,6 +50,7 @@ namespace TravelExperts
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //Validation on Save button click
             try
             {
                 string supplier = txtSupplier.Text;
@@ -107,6 +104,7 @@ namespace TravelExperts
             }
         }
 
+        //Cancel button closes this window
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();

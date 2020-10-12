@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TravelExperts
@@ -29,7 +23,6 @@ namespace TravelExperts
 
         public void PopulateGrid()
         {
-
             //Select Supplier as SuppName from Product Table
             var suppliers = _db.Suppliers.Select(s => new
             {
@@ -41,6 +34,7 @@ namespace TravelExperts
             gvSupplierList.DataSource = suppliers;
             gvSupplierList.Columns["SupplierId"].Visible = false;
         }
+        //button to Add supplier
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
             var addEditSupplier = new AddEditSupplier(this);
@@ -49,6 +43,7 @@ namespace TravelExperts
             addEditSupplier.Show();
         }
 
+        //Button to edit a supplier
         private void btnEditSupplier_Click(object sender, EventArgs e)
         {
             try
@@ -71,9 +66,9 @@ namespace TravelExperts
 
         }
 
+        //button to delete a supplier
         private void btnDeleteSupplier_Click(object sender, EventArgs e)
         {
-
             try
             {
                 //select row
@@ -98,19 +93,7 @@ namespace TravelExperts
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-
-            //gvSupplierList.Refresh();
         }
 
-
-
-   
-
-       
-
-        
-
-        
-       
     }
 }
